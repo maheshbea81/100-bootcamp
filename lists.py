@@ -10,6 +10,7 @@
 6. list1.sort() --> this will sort elements of same data types, either strings or numbers in list, original list will be modified.
 7. sorted(list1, reverse=True/False) --> this will sort and original list will not be modified
 8.list1+list2 --> will concatenate list1 and list2, but original list1 and list2 will not be modified. 
+9. list1.clear() will clear the list contents.
 '''
 
 # Creating lists
