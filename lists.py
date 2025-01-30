@@ -1,7 +1,7 @@
-'''
+ '''
 1. min, max, len methods works on lists and any mutable (AKA editable/manipulative methods) will work on lists. 
 2. 3 ways to remove an elemenet from list
-    1. del list1[index]  --> this will remove index position from list1 variable. 
+    1. del list1[index]  --> this will remove index position from list1 variable. del list1 --> this will remove complete list1
     2. list1.pop(index) --> this will remove element at index position and give the output as this indexed/popped value, and original list is also editable. 
     3. list1.remove(ELEMENT)  --> this will remove ELEMENT itself from list1 variable.  use case: if you know what value you are going to remove, use remove method. 
 3. list1.insert(index,'value')  --> this will insert (not update existing indexed position) value , list1[index]="value" --> this will update the existing value at indexed position. 
