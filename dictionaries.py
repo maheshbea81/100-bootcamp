@@ -37,6 +37,11 @@ dict1['Vendor']
 
 Strings, Tuples/Frozenset and Dictionary keys are immutable
 List/Sets/ Dictionary Key value are mutable
+
+3. dict1={1:'a',2:'b',3:'c'}
+   list(reversed(dict1.items()))  --> output in reversed format [(3, 'c'), (2, 'b'), (1, 'a')], you can use list(reversed(dict1.values()), list(reversed(dict1.keys())
+
+
 '''
 
 
