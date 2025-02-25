@@ -47,3 +47,17 @@ example_function(name="Alice", age=30, city="New York")
 # Argument age: 30
 # Argument city: New York
 In this example, example_function is defined to accept any number of keyword arguments using **kwargs. When the function is called with name="Alice", age=30, and city="New York", these arguments are collected into a dictionary kwargs, which is then iterated over to print each argument's name and value.
+
+def calculate(**pdb):
+    for key, value in pdb.items():
+        print(f"{key}: {value}")
+
+dict1 = {}
+count = 1
+while count <= 2:
+    key1 = input("Please Enter Sequence: ")
+    value1 = input("Please Enter Sequence Value: ")
+    dict1[key1] = value1 # Correct way to add key-value pairs
+    count += 1
+
+calculate(**dict1) # Correct way to pass the dictionary as keyword arguments
