@@ -61,3 +61,19 @@ while count <= 2:
     count += 1
 
 calculate(**dict1) # Correct way to pass the dictionary as keyword arguments
+
+
+
+def emailname(*pdb):
+    for email in pdb:
+        # print(f"Your Email:  {email}")
+        # print(email.split("@"))
+        yourname = email.split("@")[0]
+        company = email.split("@")[1]
+        # print(f"Your Name:  {yourname}")
+        # print(f"Your Company:  {company}")
+        fname = yourname.split(".")[0]
+        lname = yourname.split(".")[1]
+        company1 = company.split(".")[0]
+        print(f"First Name:  {fname}, Last Name:  {lname}, company Name: {company1}")
+        
