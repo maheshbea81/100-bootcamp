@@ -63,7 +63,7 @@ while count <= 2:
 calculate(**dict1) # Correct way to pass the dictionary as keyword arguments
 
 
-
+### Code we have written
 def emailname(*pdb):
     for email in pdb:
         # print(f"Your Email:  {email}")
@@ -77,3 +77,70 @@ def emailname(*pdb):
         company1 = company.split(".")[0]
         print(f"First Name:  {fname}, Last Name:  {lname}, company Name: {company1}")
         
+
+
+
+def emailname(*pdb):
+    for email in pdb:
+        yourname = email.split("@")[0]
+        company = email.split("@")[1]
+        fname = yourname.split(".")[0]
+        lname = yourname.split(".")[-1]
+        if len(yourname.split(".")) > 2:
+            mname = yourname.split(".")[1:-1]
+            middle = ' '.join(mname)
+        else:
+            middle = " "
+        company1 = company.split(".")[0]
+        print(f"First Name:  {fname}, Middle Name:  {middle}, Last Name:  {lname}, company Name: {company1}")
+        # print(f"Middle Name: {mname}")
+
+emails = []
+count = 1
+while count <= 1:
+    email = input("Please Enter email: ")
+    emails.append(email)
+    count += 1
+
+emailname(*emails) # Correct way to pass the dictionary as keyword arguments
+
+
+
+
+##### Chat GPT code
+def emailname(*emails):
+    """
+    Extracts first, middle, last names, and company name from email addresses.
+
+    Args:
+        *emails: Variable number of email address strings.
+    """
+    for email in emails:
+        parts = email.split("@")
+        if len(parts) != 2: # handle invalid email
+          print(f"Invalid email: {email}")
+          continue
+
+        yourname, company = parts
+        names = yourname.split(".")
+        fname = names[0]
+        lname = names[-1]
+
+        middle = " ".join(names[1:-1]) if len(names) > 2 else ""
+
+        company1 = company.split(".")[0]
+
+        print(f"First Name: {fname} Middle Name: {middle} Last Name: {lname} Company Name: {company1}")
+
+emails = []
+while True:
+    email = input("Enter email (or 'done' to finish): ")
+    if email.lower() == "done":
+        break
+    emails.append(email)
+
+emailname(*emails)
+# email = input("Please Enter email: ") #simplified, only one email
+# emails.append(email)
+#
+# emailname(*emails)
