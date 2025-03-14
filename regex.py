@@ -35,6 +35,20 @@ b = re.sub(r"\d", "7", arp) #replaces all occurrences of the specified pattern i
 '77.77.77.7      7         b7:a7:7a:ff:c7:77 VLAN#777             L   77.77.77.77' #result of the above operation
 
 7. https://cdn.activestate.com/wp-content/uploads/2020/03/Python-RegEx-Cheatsheet.pdf cheat sheet for regex
+
+.: Matches any character except a newline.
+^: Matches the beginning of the string.
+$: Matches the end of the string.
+*: Matches zero or more occurrences of the preceding character or group.
++: Matches one or more occurrences of the preceding character or group.
+?: Matches zero or one occurrence of the preceding character or group.
+[]: Defines a character class, matching any character within the brackets.
+\d: Matches any digit (0-9).
+\w: Matches any word character (letters, digits, or underscores).
+\s: Matches any whitespace character (space, tab, newline).
+\b: Matches a word boundary.
+`\`: Escapes special characters.
+(): Groups characters or expressions.
 '''
 
 import re
